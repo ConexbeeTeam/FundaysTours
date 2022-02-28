@@ -34,10 +34,9 @@ body {
 }
 
 .hero-content {
-  width: 780px;
-  height: 76px;
+  max-width: 780px;
   text-align: left;
-  margin-top: 200px;
+  margin-top: 150px;
   margin-left: 50px;
 }
 
@@ -60,8 +59,8 @@ body {
 /* FONT STYLES */
 h1 {
   font-family: 'Fjalla One', sans-serif;
-  font-size: 81px;
-  line-height: 102px;
+  font-size: 5rem;
+  line-height: normal;
   color: #0066B2;
 }
 
@@ -91,7 +90,7 @@ a:active  {
 /* IMAGE ELEMENTS */
 .brand-logo {
   display: inline-block;
-  width: 340px;
+  width: 100%;
 }
 
 
@@ -136,25 +135,26 @@ a:active  {
 
 
 /* MEDIA QUERIES */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 721px) and (max-width: 1023px) {
   .hero-content {
-    width: 600px;
-    margin-top: 150px;
     margin-left: 0px;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 321px) and (max-width: 720px) {
+
+  .container {
+    padding: 30px;
+  }
+
   .flex-container {
     flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
   }
 
   .brand-box {
     justify-content: center;
-  }
-
-  .brand-logo {
-    width: 235px;
   }
 
   .contact {
@@ -171,29 +171,12 @@ a:active  {
     margin-top: 60px;
   }
 
-  h1 {
-    font-size: 54px;
-    line-height: 64px;
-  }
-
-  .subheader {
-    font-size: 18px;
-    line-height: 25px;
-  }
-
-  .cta-btn {
-    width: 100%;
-    margin-top: 30px;
-    height: 45px;
-  }
-
-  .cta-btn a {
-    font-size: 18px;
-    line-height: 25px;
-  }
-
   .hero-bg-img {
     width: 100%;
     bottom: 0px;
   }
 }
+
+/* @media screen and (max-width: 320px) {
+
+} */
